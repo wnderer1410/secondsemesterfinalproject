@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+    <meta charset=”utf-8”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+
+    <title>Music</title>
+</head>
+
+<body>
+    <header>
+        <img src="../image_assets/small/logo_250x298.png" id="logo">
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="home.html">Home</a>
+                <a href="music.html">Music</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <nav class="logos">
+            <ul>
+                <li class="symbolM" onclick="openNav()"><i class="icon ion-md-menu"></i></li>
+                <li><a href="https://www.instagram.com/sanaipeitande/?hl=es"><i class="icon ion-logo-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/SanaipeiTandeKE/"><i class="icon ion-logo-facebook"></i></a></li>
+                <li><a href="https://twitter.com/Sanaipei_Tande"><i class="icon ion-logo-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCihe5asUQZ32dqD0mOBPXog/featured"><i class="icon ion-logo-youtube"></i></a></li>
+            </ul>
+        </nav>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active3" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <footer id="contactfooter">
+        <nav class="contactlogosfooter">
+            <ul>
+                <li><a href="https://www.instagram.com/sanaipeitande/?hl=es" target="_blank"><i class="icon ion-logo-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/SanaipeiTandeKE/" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
+                <li><a href="https://twitter.com/Sanaipei_Tande" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCihe5asUQZ32dqD0mOBPXog/featured" target="_blank"><i class="icon ion-logo-youtube"></i></a></li>
+                <li><a href="#"><i class="icon ion-md-mail"></i></a></li>
+
+            </ul>
+        </nav>
+
+
+    </footer>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+        function openInNewTab(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+
+    </script>
+
+
+</body>
+
+</html>

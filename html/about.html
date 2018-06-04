@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+    <meta charset=”utf-8”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+
+    <title>About</title>
+</head>
+
+<body>
+    <header>
+        <img src="../image_assets/small/logo_250x298.png" id="logo">
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="home.html">Home</a>
+                <a href="music.html">Music</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <nav class="logos">
+            <ul>
+                <li class="symbolM" onclick="openNav()"><i class="icon ion-md-menu"></i></li>
+                <li><a href="https://www.instagram.com/sanaipeitande/?hl=es"><i class="icon ion-logo-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/SanaipeiTandeKE/"><i class="icon ion-logo-facebook"></i></a></li>
+                <li><a href="https://twitter.com/Sanaipei_Tande"><i class="icon ion-logo-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCihe5asUQZ32dqD0mOBPXog/featured"><i class="icon ion-logo-youtube"></i></a></li>
+            </ul>
+        </nav>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a class="active2" href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+
+
+        <video id="aboutvideo" poster="../image_assets/large/video_startimage1.png" controls>
+        <source src="../video/about_video.mp4">
+        </video>
+
+
+
+        <div class="margincontainer">
+
+
+
+
+            <div class="aboutartist">
+                <div class="col-2">
+                    <div class="portrait">
+                        <img src="../image_assets/small/portrait.jpg" id="portrait">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div style="overflow-x:auto;">
+                        <div class="table">
+                            <h id="nametext">NATASHA SANAIPEI TANDE</h>
+
+                            <table>
+                                <tr>
+                                    <td>Born</td>
+                                    <td class="tdright"> 22 March 1985 </td>
+                                </tr>
+                                <tr>
+                                    <td>Age</td>
+                                    <td class="tdright">33</td>
+                                </tr>
+                                <tr>
+                                    <td>Origin</td>
+                                    <td class="tdright">Nairobi, Kenya</td>
+                                </tr>
+                                <tr>
+                                    <td>Genres</td>
+                                    <td class="tdright">RnB-African Pop-Pop Reggae</td>
+                                </tr>
+                                <tr>
+                                    <td>Occupations</td>
+                                    <td class="tdright">Singer-Songwriter-Radio personality-Karaoke host</td>
+                                </tr>
+                                <tr>
+                                    <td>Years active</td>
+                                    <td class="tdright">2014-present</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <p id="bio">Natasha Sanaipei Tande professionally known as Sana, is a Kenyan singer, songwriter, karaoke host, radio personality and entertainer. Born and raised in Mombasa and later on in Ngong, she gained prominence after winning the 2004 East Africa Coca Cola Popstars Talent Search together with two other bandmates. Thereafter she had a short stint at Capital FM. In 2007 she joined Kiss 100 and thereafter Easy FM in 2013 (now known as Nation FM), where her daily mid-morning show garnered the station's highest listenership.</p>
+                </div>
+            </div>
+
+            <img id="aboutimage" src="../image_assets/large/about_collage.png">
+        </div>
+
+
+    </main>
+    <footer>
+        <p>Copyright (C) 2018</p>
+        <nav class="logosfooter">
+            <ul>
+                <li><a href="https://www.instagram.com/sanaipeitande/?hl=es" target="_blank"><i class="icon ion-logo-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/SanaipeiTandeKE/" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
+                <li><a href="https://twitter.com/Sanaipei_Tande" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCihe5asUQZ32dqD0mOBPXog/featured" target="_blank"><i class="icon ion-logo-youtube"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        let imgelm = document.querySelector("#sana2");
+
+        console.log(imgelm);
+
+
+
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+            imgelm.classList.add("zindex");
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+            imgelm.classList.remove("zindex");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

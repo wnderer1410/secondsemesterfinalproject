@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+
+<head>
+    <meta charset=”utf-8”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+
+
+    <title>Music</title>
+</head>
+
+<body>
+    <header>
+        <img src="../image_assets/small/logo_250x298.png" id="logo">
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="home.html">Home</a>
+                <a href="music.html">Music</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <nav class="logos">
+            <ul>
+                <li class="symbolM" onclick="openNav()"><i class="icon ion-md-menu"></i></li>
+                <li><a href="https://www.instagram.com/sanaipeitande/?hl=es"><i class="icon ion-logo-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/SanaipeiTandeKE/"><i class="icon ion-logo-facebook"></i></a></li>
+                <li><a href="https://twitter.com/Sanaipei_Tande"><i class="icon ion-logo-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCihe5asUQZ32dqD0mOBPXog/featured"><i class="icon ion-logo-youtube"></i></a></li>
+            </ul>
+        </nav>
+
+        <nav class="menu">
+            <ul>
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <img id="sana6" src="../image_assets/large/homepage_image.png">
+
+
+        <div class="margincontainer">
+
+            <section id="eventlist">
+
+                <template id="eventtemp">
+                         <article class="events">
+                                <h2 class="date">date</h2>
+                                <h>title</h>
+                                <h3 class="location">venue</h3>
+                                <div class="descript">description goes here</div>
+                        </article>
+                </template>
+            </section>
+
+        </div>
+    </main>
+
+
+
+    <footer>
+        <p>Copyright (C) 2018 </p>
+        <nav class="logosfooter">
+            <ul>
+                <li><a href="https://www.instagram.com/sanaipeitande/?hl=es" target="_blank"><i class="icon ion-logo-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/SanaipeiTandeKE/" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
+                <li><a href="https://twitter.com/Sanaipei_Tande" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCihe5asUQZ32dqD0mOBPXog/featured" target="_blank"><i class="icon ion-logo-youtube"></i></a></li>
+            </ul>
+        </nav>
+
+    </footer>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+
+
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+            Headingelm.classList.remove("zindex");
+        }
+
+        function openInNewTab(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+
+        function openMore() {
+            document.getElementById("more").style.width = "100%";
+        }
+
+        function closeMore() {
+            document.getElementById("more").style.width = "0%";
+        }
+
+
+
+
+
+        function fetchEvents() {
+            fetch("http://wnderer.eu/wordpress/wp-json/wp/v2/events")
+                .then(e => e.json())
+                .then(showEvents)
+        }
+
+
+        function showEvents(data) {
+            console.log(data);
+            data.forEach(showSingleEvent)
+        }
+
+
+        function showSingleEvent(anEvent) {
+            console.log(anEvent);
+            let template = document.querySelector("#eventtemp").content;
+            let clone = template.cloneNode(true);
+
+
+            clone.querySelector("h").textContent = anEvent.title.rendered;
+
+            clone.querySelector(".location").textContent = anEvent.acf.location;
+
+            clone.querySelector(".descript").innerHTML = anEvent.content.rendered;
+
+            clone.querySelector(".date").textContent = anEvent.acf.date;
+
+
+            let eventlist = document.querySelector("#eventlist");
+            eventlist.appendChild(clone);
+
+
+
+
+
+        }
+
+        fetchEvents();
+
+    </script>
+
+</body>
+
+</html>
